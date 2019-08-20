@@ -1,4 +1,14 @@
 {
+  "name": "ntulearndownloader",
+  "version": "0.0.1",
+  "main": "./modules/NTUMobile.js",
+  "repository": "git@github.com:ShaunLWM/NTULearnDownloader.git",
+  "author": "ShaunLWM",
+  "license": "MIT",
+  "bin": {
+    "ntulearn": "./bin/index.js"
+  },
+  "preferGlobal": true,
   "dependencies": {
     "filenamify": "^4.1.0",
     "fs-extra": "^8.1.0",

@@ -1,4 +1,6 @@
-const NTUMobile = require("./modules/NTUMobile");
+#!/usr/bin/env node
+
+const NTUMobile = require("../modules/NTUMobile");
 const meow = require("meow");
 
 (async () => {
