@@ -41,4 +41,4 @@ ntulearn --username YOUR_USERNAME --password YOUR_PASSWORD --directory C:\ntu
 
 ## License
 
-MIT © [Shaun](https://github.co/shaunidiot)
+MIT © [Shaun](https://github.com/ShaunLWM)
