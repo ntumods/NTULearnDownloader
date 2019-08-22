@@ -20,12 +20,15 @@ const meow = require("meow");
 `, {
             flags: {
                 username: {
+                    alias: "u",
                     type: "string"
                 },
                 password: {
+                    alias: "p",
                     type: "string"
                 },
                 directory: {
+                    alias: "d",
                     type: "string",
                     default: "./NTULearn"
                 }
