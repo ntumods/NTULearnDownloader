@@ -10,7 +10,7 @@ const filenamify = require("filenamify");
 const NTULEARN_BASE_URL = "https://ntulearn.ntu.edu.sg";
 
 class NTUMobile {
-    constructor({ username, password }) {
+    constructor({ username, password, directory }) {
         fs.ensureFileSync("./cookies.json");
         this.jar = request.jar(new FileCookieStore("./cookies.json"));
         this.req = request.defaults({ jar: this.jar });
@@ -19,6 +19,7 @@ class NTUMobile {
         this.isLoggedIn = false;
         this._userModules = [];
         this._userId = null;
+        this.baseDirectory = directory;
     }
 
     get modules() {
@@ -124,7 +125,7 @@ class NTUMobile {
                     let name = courseElement["name"];
                     let linkType = courseElement["linktype"];
                     if (name.toLowerCase() === "recorded lectures" || linkType.toLowerCase() !== "content") continue;
-                    await this.iter(courseId, courseItem[index], path.join("./data/", courseName, name))
+                    await this.iter(courseId, courseItem[index], path.join(this.baseDirectory, courseName, name))
                 }
             }
         } catch (error) {

@@ -37,11 +37,12 @@ const meow = require("meow");
 
     let username = cli["flags"]["username"];
     let password = cli["flags"]["password"];
+    let directory = cli["flags"]["directory"];
     if (typeof username === "undefined" || username === null || typeof password === "undefined" || password === null) {
         return console.error("[!] username or password cannot be empty.");
     }
 
-    let n = new NTUMobile({ username, password });
+    let n = new NTUMobile({ username, password, directory });
     let isLoggedIn = await n.login();
     if (!isLoggedIn) {
         return console.error("[!] Unable to login. Please check username and password validity.");
