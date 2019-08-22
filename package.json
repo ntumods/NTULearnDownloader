@@ -1,6 +1,6 @@
 {
   "name": "ntulearndownloader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./modules/NTUMobile.js",
   "repository": "git@github.com:ShaunLWM/NTULearnDownloader.git",
   "author": "ShaunLWM",
